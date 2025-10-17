@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavana C Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    /* Reset & Base */
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {background: linear-gradient(to right, #f0f4f8, #e9ecef); color: #333; scroll-behavior: smooth; overflow-x: hidden;}
+    a {text-decoration: none; color: inherit;}
+    section {padding: 5rem 5%;}
+    h2 {text-align: center; font-size: 2rem; color: #1e1e2f; margin-bottom: 2rem;}
+
+    /* Header */
+    header {background-color: #1e1e2f; color: #fff; padding: 2rem 5%; text-align: center; position: sticky; top: 0; z-index: 1000;}
+    header h1 {font-size: 2.5rem; margin-bottom: 0.5rem; color: #ff6b81;}
+    header p {font-size: 1rem; color: #ccc;}
+    nav {margin-top: 1rem;}
+    nav a {margin: 0 15px; font-weight: 600; transition: 0.3s;}
+    nav a:hover {color: #ff6b81;}
+
+    /* Card Layouts */
+    .flex-container {display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;}
+    .card {background: #fff; border-radius: 15px; padding: 2rem; width: 280px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: 0.3s; position: relative;}
+    .card:hover {transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.2);}
+    .card i {font-size: 2rem; color: #ff6b81; margin-bottom: 1rem;}
+    .card h3 {margin-bottom: 1rem; color: #ff6b81;}
+    .card p {font-size: 0.95rem; line-height: 1.6; text-align: center; word-break: break-word;} /* Centered text & wrapped */
+    .card p a {color: inherit; text-decoration: none; display: inline-block;}
+    .card p a:hover {color: #ff6b81;}
+    
+    /* Card hover overlay animation */
+    .card::after {content: ""; position: absolute; top: 0; left: 0; width: 0; height: 100%; border-radius: 15px; background: rgba(255,107,129,0.1); transition: 0.3s;}
+    .card:hover::after {width: 100%;}
+
+    /* Marquee Style */
+    .marquee-container {overflow: hidden; white-space: nowrap; background: #ff6b81; color: #fff; padding: 0.5rem 0; margin-bottom: 2rem; border-radius: 10px;}
+    .marquee-content {display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite;}
+    @keyframes marquee {0% {transform: translateX(0);} 100% {transform: translateX(-100%);}}
+
+    /* Projects Grid */
+    .projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;}
+
+    /* Floating Shapes Background */
+    .floating-shape {position: absolute; border-radius: 50%; opacity: 0.2; animation: float 10s infinite alternate;}
+    .shape1 {width: 100px; height: 100px; background: #ff6b81; top: 10%; left: 5%;}
+    .shape2 {width: 150px; height: 150px; background: #6bafff; top: 50%; left: 80%;}
+    .shape3 {width: 80px; height: 80px; background: #ffda6b; top: 70%; left: 20%;}
+    @keyframes float {0% {transform: translateY(0px);} 100% {transform: translateY(-20px);}}
+
+    /* Footer */
+    footer {background-color: #1e1e2f; color: #ccc; text-align: center; padding: 2rem 5%;}
+    footer a {color: #ff6b81; margin: 0 10px; transition: 0.3s;}
+    footer a:hover {color: #fff;}
+
+    /* Responsive */
+    @media(max-width:768px){.flex-container, .projects {flex-direction: column; align-items: center;}}
+</style>
+</head>
+<body>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+
+    <!-- Header -->
+    <header>
+        <h1>Bhavana C</h1>
+        <p>AI Specialist & Web Developer | Passionate About Clean, Scalable Web Applications</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-content">🚀 Skilled in Python | Django | HTML | CSS | JavaScript | AI & ML | Web Development 🚀</div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="max-width:700px; margin:0 auto; text-align:center;">
+            I am a recent Computer Science graduate specializing in Artificial Intelligence and an enthusiastic Web Developer skilled in HTML, CSS, JavaScript, Django, and MySQL. Passionate about creating responsive, efficient, and user-friendly web applications with clean, scalable code. Eager to contribute creativity and technical expertise to a dynamic, growth-oriented team.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills & Competencies</h2>
+        <div class="flex-container">
+            <div class="card"><i class="fas fa-code"></i><h3>Programming</h3><p>Python, Java, C++, HTML, CSS, JavaScript</p></div>
+            <div class="card"><i class="fas fa-layer-group"></i><h3>Frameworks & Tools</h3><p>Django, REST APIs, Power BI, Tableau</p></div>
+            <div class="card"><i class="fas fa-database"></i><h3>Databases</h3><p>MySQL, MongoDB</p></div>
+            <div class="card"><i class="fas fa-project-diagram"></i><h3>Concepts</h3><p>OOP, Agile Development, Data Structures & Algorithms</p></div>
+            <div class="card"><i class="fas fa-users"></i><h3>Soft Skills</h3><p>Analytical Thinking, Problem-Solving, Teamwork, Adaptability</p></div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card"><i class="fas fa-heartbeat"></i><h3>Diabetes Detection</h3><p>ML model to predict diabetes using health metrics.</p></div>
+            <div class="card"><i class="fas fa-tshirt"></i><h3>AI in Fashion-Tech</h3><p>AI-powered virtual try-on and recommendation systems.</p></div>
+            <div class="card"><i class="fas fa-robot"></i><h3>Web Scraper</h3><p>Automated Python tool for data extraction.</p></div>
+            <div class="card"><i class="fas fa-tasks"></i><h3>Task Manager Web App</h3><p>Django app with MySQL, Bootstrap, REST APIs & CRUD features.</p></div>
+        </div>
+    </section>
+    <section id="resume">
+        <h2>Resume/CV</h2>
+        <p>Download my <a href="C:\Users\bhava\Downloads\Bhavana_WebDeveloper.pdf"" target="_blank">Resume/CV</a>.</p>
+        <!-- Certificates -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="flex-container">
+            <div class="card"><i class="fas fa-certificate"></i><h3>AI Masterclass</h3><p>Stanford University</p></div>
+            <div class="card"><i class="fas fa-certificate"></i><h3>Data Analytics</h3><p>Coursera</p></div>
+            <div class="card"><i class="fas fa-certificate"></i><h3>Web Dev Bootcamp</h3><p>Udemy</p></div>
+            <div class="card"><i class="fas fa-certificate"></i><h3>DS & Algorithms</h3><p>Simplilearn</p></div>
+            <div class="card"><i class="fas fa-certificate"></i><h3>Java Programming</h3><p>Coursera</p></div>
+        </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies">
+        <h2>Hobbies & Interests</h2>
+        <div class="flex-container">
+            <div class="card"><i class="fas fa-chess"></i><h3>Chess</h3></div>
+            <div class="card"><i class="fas fa-paint-brush"></i><h3>Drawing</h3></div>
+            <div class="card"><i class="fas fa-laptop-code"></i><h3>Coding Projects</h3></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="flex-container">
+            <div class="card"><i class="fas fa-phone"></i><h3>Phone</h3><p>+91-6304589390</p></div>
+            <div class="card"><i class="fas fa-envelope"></i><h3>Email</h3><p>Bhavanachintamani19@gmail.com</p></div>
+            <div class="card"><i class="fab fa-linkedin"></i><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/chintamanipeta-bhavana-35860620b" target="_blank">View Profile</a></p></div>
+            <div class="card"><i class="fab fa-github"></i><h3>GitHub</h3><p><a href="https://github.com/bhavanachintamani" target="_blank">View Repos</a></p></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bhavana C | Designed with ❤️</p>
+        <div>
+            <a href="#about">About</a> | 
+            <a href="#skills">Skills</a> | 
+            <a href="#projects">Projects</a> | 
+            <a href="#certificates">Certificates</a> | 
+            <a href="#hobbies">Hobbies</a> | 
+            <a href="#contact">Contact</a>
+            <a href="#resume">Resume/CV</a>
+        </div>
+    </footer>
+
+</body>
+</html>
